@@ -191,7 +191,7 @@ nav ul li:hover ul {
 /* ハンバーガーメニュー用ナビゲーション */
 @media screen and (max-width: 768px) {
     nav ul {
-        display: flex;
+        display: none;
         flex-direction: column;
         gap: 10px;
         width: 100%;
@@ -217,7 +217,9 @@ nav ul li:hover ul {
         color: white;
         cursor: pointer;
         z-index: 1000; /* メニューより前面に表示 */
-        position: relative; /* 固定ではなくヘッダー内に表示 */
+        position: absolute; /* 固定配置 */
+        top: 15px; /* ヘッダーの上部からの距離 */
+        right: 20px; /* ヘッダーの右端からの距離 */
     }
 
     header {
