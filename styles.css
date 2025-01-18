@@ -123,3 +123,103 @@ footer {
     display: inline-block;
     width: 9em;
 }
+
+
+/* ヘッダー全体 */
+header {
+    display: flex;
+    flex-direction: column; /* 縦並びにする */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #02364E;
+    color: white;
+}
+
+/* タイトルのスタイル */
+.title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.title h4 {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* ナビゲーションメニュー */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* サブメニュー */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #02364E;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+/* ハンバーガーメニュー */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+    z-index: 1000;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 768px) {
+    nav ul {
+       display: none; /* デフォルトでは非表示 */
+       flex-direction: column; /* 縦並びに変更 */
+       gap: 10px;
+       width: 100%;
+       padding: 10px 0;
+       background-color: #02364E;
+       list-style: none;
+       padding: 0;
+       margin: 0;
+       transition: max-height 0.3s ease-out;
+       overflow: hidden;
+       max-height: 0;
+  }
+
+    nav ul.active {
+        display: flex; /* メニューを表示 */
+        max-height: 500px; /* 必要に応じて調整 */
+    }
+
+    .menu-toggle {
+        display: block; /* ハンバーガーボタンを表示 */
+    }
+
+    header {
+        align-items: flex-start; /* 幅狭い画面では左揃え */
+    }
+
+    .title {
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+}

@@ -11,6 +11,21 @@ document.addEventListener("DOMContentLoaded", () => {
             if (englishLink) {
                 englishLink.href = `/en${currentPath}`;
             }
+
+            // ハンバーガーメニューの動作を設定
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navMenu = document.querySelector("nav ul");
+
+            menuToggle.addEventListener("click", () => {
+                navMenu.classList.toggle("active"); // メニューの開閉
+            });
+
+            // キーボード操作対応
+            menuToggle.addEventListener("keypress", (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    navMenu.classList.toggle("active");
+                }
+            });
         });
 
     // フッターをロード
