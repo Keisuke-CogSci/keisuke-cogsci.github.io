@@ -180,12 +180,14 @@ nav ul li:hover ul {
 
 /* ハンバーガーメニュー */
 .menu-toggle {
-    display: none;
+    display: none; /* デフォルトでは非表示 */
     font-size: 24px;
     color: white;
     cursor: pointer;
-    margin-bottom: 10px;
-    z-index: 1000;
+    z-index: 1001; /* メニューより前面に表示 */
+    position: absolute; /* 固定配置 */
+    top: 15px; /* ヘッダーの上部からの距離 */
+    right: 20px; /* ヘッダーの右端からの距離 */
 }
 
 /* ハンバーガーメニュー用ナビゲーション */
