@@ -185,51 +185,50 @@ nav ul li:hover ul {
     color: white;
     cursor: pointer;
     margin-bottom: 10px;
+    z-index: 1000;
 }
 
-/* レスポンシブデザイン */
+/* ハンバーガーメニュー用ナビゲーション */
 @media screen and (max-width: 768px) {
     nav ul {
-       display: none; /* デフォルトでは非表示 */
-       flex-direction: column; /* 縦並びに変更 */
-       gap: 10px;
-       width: 100%;
-       padding: 10px 0;
-       background-color: #02364E;
-  }
-  /* メニューのデフォルト状態を非表示に設定 */
-　  nav ul {
-      　list-style: none;
-      　display: flex;
-      　gap: 15px;
-      　padding: 0;
-      　margin: 0;
-  　}
-
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 20px 0;
+        background-color: rgba(0, 0, 0, 0.9); /* 背景色を濃くする */
+        position: fixed; /* 固定配置 */
+        top: 0;
+        left: 0;
+        height: 100%; /* 全画面を覆う */
+        overflow-y: auto; /* 縦スクロール可能にする */
+        z-index: 999; /* 他の要素よりも前面に表示 */
+        transform: translateY(-100%); /* 初期状態で非表示 */
+        transition: transform 0.3s ease; /* スライドアニメーション */
+    }
 
     nav ul.active {
-        display: flex; /* メニューを表示 */
+        transform: translateY(0); /* メニューを表示 */
     }
 
     .menu-toggle {
-        display: block; /* ハンバーガーボタンを表示 */
+        display: block;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        z-index: 1000; /* メニューより前面に表示 */
+        position: absolute; /* 固定配置 */
+        top: 15px; /* ヘッダーの上部からの距離 */
+        right: 20px; /* ヘッダーの右端からの距離 */
     }
 
     header {
-        align-items: flex-start; /* 幅狭い画面では左揃え */
+        position: relative; /* ヘッダー全体を基準にアイコンを配置 */
+        z-index: 1000; /* メニューよりも前面 */
     }
 
     .title {
-        align-items: flex-start;
-        margin-bottom: 20px;
+        position: relative; /* タイトルは移動させない */
+        z-index: 1; /* メニューよりも後ろに表示 */
     }
-}
-
-/* ハンバーガーメニュー */
-.menu-toggle {
-    display: none; /* デフォルトで非表示 */
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 10px;
 }
