@@ -1,47 +1,58 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  const script = document.currentScript || document.querySelector('script[src*="common.js"]');
+  const basePath = (() => {
+    try {
+      const u = new URL(script.src, location.origin);
+      return u.pathname.replace(/\/common\.js.*$/, "");
+    } catch { return ""; }
+  })();
+
   const here = new URL(location.href);
-  const isEN = here.pathname.startsWith("/en/");
+  const isEN = here.pathname.startsWith(`${basePath}/en/`) || here.pathname === `${basePath}/en`;
 
-  // 現在ページ ⇄ 対応ページ のパスを計算
-  const jaPath = isEN ? here.pathname.replace(/^\/en(\/|$)/, "/") || "/" : here.pathname || "/";
-  const enPath = isEN ? here.pathname || "/en/" : "/en" + (here.pathname === "/" ? "/" : here.pathname);
-
-  // 404 等を避けるための軽い正規化
-  function normalize(p) {
-    return p.replace(/\/{2,}/g, "/");
-  }
-
-  // 断続的に試すローダ（最初に読めたものを採用）
   async function loadFragment(paths, targetId) {
     const target = document.getElementById(targetId);
     if (!target) return;
-    for (const path of paths) {
+    for (const p of paths) {
       try {
-        const res = await fetch(path, { cache: "no-store" });
+        const res = await fetch(p, { cache: "no-store" });
         if (res.ok) {
-          const html = await res.text();
-          target.innerHTML = html;
+          target.innerHTML = await res.text();
           return true;
         }
-      } catch (_) { /* next candidate */ }
+      } catch { /* try next */ }
     }
-    return false;
   }
 
-  const headerCandidates = isEN ? ["/en/header.html", "/header.html"] : ["/header.html", "/en/header.html"];
-  const footerCandidates = isEN ? ["/en/footer.html", "/footer.html"] : ["/footer.html", "/en/footer.html"];
+  const headerCandidates = isEN
+    ? [`${basePath}/en/header.html`, `${basePath}/header.html`]
+    : [`${basePath}/header.html`, `${basePath}/en/header.html`];
+  const footerCandidates = isEN
+    ? [`${basePath}/en/footer.html`, `${basePath}/footer.html`]
+    : [`${basePath}/footer.html`, `${basePath}/en/footer.html`];
 
   loadFragment(headerCandidates, "header-placeholder").then(() => {
 
-    const toJa = document.getElementById("to-ja");
-    const toEn = document.getElementById("to-en");
-    if (toJa) toJa.setAttribute("href", normalize(jaPath + here.search));
-    if (toEn) toEn.setAttribute("href", normalize(enPath + here.search));
+    const aJa = document.getElementById("to-ja");
+    const aEn = document.getElementById("to-en");
+    const norm = (p) => p.replace(/\/{2,}/g, "/");
 
-    const englishLink = document.querySelector("#english-link");
-    if (englishLink) englishLink.setAttribute("href", normalize(enPath + here.search));
+    const jaPath = isEN
+      ? norm(here.pathname.replace(new RegExp(`^${basePath}/en(\\/|$)`), `${basePath}/`)) || `${basePath}/`
+      : here.pathname || `${basePath}/`;
+    const enPath = isEN
+      ? here.pathname
+      : norm(`${basePath}/en${here.pathname === `${basePath}/` ? "/" : here.pathname.replace(basePath, "")}`);
 
-    // ハンバーガーメニュー
+    if (aJa) aJa.href = jaPath + here.search;
+    if (aEn) aEn.href = enPath + here.search;
+
+    // 旧ID対応
+    const englishLink = document.getElementById("english-link");
+    if (englishLink) englishLink.href = enPath + here.search;
+
+    // ハンバーガー
     const menuToggle = document.querySelector(".menu-toggle");
     const navMenu = document.querySelector("nav ul");
     if (menuToggle && navMenu) {
@@ -53,27 +64,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // フッタ読込（英語版が無ければ日本語にフォールバック）
   loadFragment(footerCandidates, "footer-placeholder");
-
-  (function ensureHrefLang() {
-    const head = document.querySelector("head");
-    if (!head) return;
-    const exists = head.querySelector('link[rel="alternate"][hreflang]');
-    if (exists) return; // 既にあるなら何もしない
-
-    const site = (p) => normalize((location.origin || "") + p);
-    const pair = [
-      { rel: "alternate", hreflang: "ja", href: site(jaPath) },
-      { rel: "alternate", hreflang: "en", href: site(enPath) },
-      { rel: "alternate", hreflang: "x-default", href: site("/en/") },
-      { rel: "canonical", href: site(isEN ? enPath : jaPath) }
-    ];
-
-    for (const attrs of pair) {
-      const link = document.createElement("link");
-      Object.entries(attrs).forEach(([k, v]) => link.setAttribute(k, v));
-      head.appendChild(link);
-    }
-  })();
 });
