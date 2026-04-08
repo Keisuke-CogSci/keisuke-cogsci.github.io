@@ -7,16 +7,45 @@ body {
     line-height: 1.6;
 }
 
-/* ヘッダーのスタイル */
+a {
+    color: inherit;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main section h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #0D638A;
+    padding-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* ヘッダー */
 header {
-    background: linear-gradient(135deg, #02364E, #0D638A);
-    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 10px 20px;
+    background: linear-gradient(135deg, #02364E, #0D638A);
+    color: white;
 }
 
 header .title {
     text-align: center;
-    margin: 20px 0;
+    margin: 20px 0 10px;
 }
 
 header .title h1 {
@@ -24,12 +53,17 @@ header .title h1 {
     margin: 0;
 }
 
-header .title h2 {
-    font-size: 1.2rem;
+header .title h4 {
     margin: 5px 0 0;
+    line-height: 1.5;
+    font-size: 1rem;
 }
 
 /* ナビゲーションメニュー */
+nav {
+    width: 100%;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -52,6 +86,11 @@ nav ul li a {
     display: block;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* サブメニュー */
 nav ul li ul {
     display: none;
     position: absolute;
@@ -62,41 +101,23 @@ nav ul li ul {
     padding: 0;
     margin: 0;
     border-radius: 5px;
+    min-width: 150px;
+    z-index: 1000;
 }
 
-nav ul li:hover ul {
+nav ul li:hover ul,
+nav ul li:focus-within ul {
     display: block;
 }
 
 nav ul li ul li {
-    width: 150px;
+    width: 100%;
+    margin: 0;
 }
 
 nav ul li ul li a {
     padding: 10px;
     font-size: 0.9rem;
-}
-
-/* メインコンテンツ */
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-main section {
-    background: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-main section h2 {
-    font-size: 1.8rem;
-    border-bottom: 2px solid #0D638A;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
 }
 
 /* フッター */
@@ -108,74 +129,35 @@ footer {
     font-size: 0.9rem;
 }
 
-.title h1 {
-    margin: 0; /* 上下のマージンをリセット */
-    margin-bottom: 1px; /* 適度な余白を追加 */
+footer p {
+    margin: 0;
 }
 
-.title h4 {
-    margin: 0; /* 上下のマージンをリセット */
-    margin-top: 5px; /* 上に少し余白を追加 */
-    line-height: 1.5; /* 行間を調整 */
-}
-
-#education span {
+/* 汎用 */
+#education span,
+#appointments span {
     display: inline-block;
     width: 9em;
 }
 
-
-/* ヘッダー全体 */
-header {
-    display: flex;
-    flex-direction: column; /* 縦並びにする */
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #02364E;
-    color: white;
-}
-
-/* タイトルのスタイル */
-.title {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.title h1 {
-    margin: 0;
-    font-size: 2rem;
-}
-
-.title h4 {
-    margin: 5px 0;
-    font-size: 1rem;
-}
-
-/* ナビゲーションメニュー */
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    padding: 0;
+#whats-new ul,
+#links ul {
+    padding-left: 1.2em;
     margin: 0;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+#whats-new li,
+#links li {
+    margin-bottom: 0.5em;
 }
 
-/* サブメニュー */
-nav ul li ul {
-    display: none;
-    position: absolute;
-    background-color: #02364E;
-    padding: 10px;
-    border-radius: 5px;
+#whats-new span {
+    font-weight: bold;
 }
 
-nav ul li:hover ul {
-    display: block;
+#about p,
+#keywords p {
+    margin: 0;
 }
 
 /* ハンバーガーメニュー */
@@ -186,47 +168,87 @@ nav ul li:hover ul {
     cursor: pointer;
     margin-bottom: 10px;
     z-index: 1000;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
-/* ハンバーガーメニュー用ナビゲーション */
+/* スマホ対応 */
 @media screen and (max-width: 768px) {
+    header {
+        position: relative;
+        z-index: 1000;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: relative;
+    }
+
     nav ul {
         display: flex;
         flex-direction: column;
         gap: 10px;
         width: 100%;
         padding: 20px 0;
-        background-color: rgba(0, 0, 0, 0.9); /* 背景色を濃くする */
-        position: fixed; /* 固定配置 */
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
         top: 0;
         left: 0;
-        height: 100%; /* 全画面を覆う */
-        overflow-y: auto; /* 縦スクロール可能にする */
-        z-index: 999; /* 他の要素よりも前面に表示 */
-        transform: translateY(-100%); /* 初期状態で非表示 */
-        transition: transform 0.3s ease; /* スライドアニメーション */
+        height: 100%;
+        overflow-y: auto;
+        z-index: 999;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
     }
 
     nav ul.active {
-        transform: translateY(0); /* メニューを表示 */
+        transform: translateY(0);
     }
 
-    .menu-toggle {
+    nav ul li {
+        margin: 0;
+        text-align: center;
+    }
+
+    nav ul li ul {
         display: block;
-        font-size: 24px;
-        color: white;
-        cursor: pointer;
-        z-index: 1000; /* メニューより前面に表示 */
-        position: relative; /* 固定ではなくヘッダー内に表示 */
+        position: static;
+        background-color: transparent;
+        border-radius: 0;
+        min-width: auto;
     }
 
-    header {
-        position: relative; /* ヘッダー全体を基準にアイコンを配置 */
-        z-index: 1000; /* メニューよりも前面 */
+    nav ul li ul li a {
+        font-size: 0.95rem;
+        opacity: 0.95;
     }
 
     .title {
-        position: relative; /* タイトルは移動させない */
-        z-index: 1; /* メニューよりも後ろに表示 */
+        position: relative;
+        z-index: 1;
+    }
+
+    header .title h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    main section {
+        padding: 16px;
+    }
+
+    main section h2 {
+        font-size: 1.5rem;
+    }
+
+    #education span,
+    #appointments span {
+        display: block;
+        width: auto;
+        margin-bottom: 2px;
     }
 }
