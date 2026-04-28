@@ -7,18 +7,26 @@
   <link rel="stylesheet" href="/styles.css">
   <script src="/common.js" defer></script>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2QHWNPWZV0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2QHWNPWZV0');
+</script>
 <body>
   <header>
     <div class="header-inner">
-      <a class="site-name" href="/index.html">佐藤 恵助 <span>Keisuke Sato</span></a>
+      <a class="site-name" href="/">佐藤 恵助 <span>Keisuke Sato</span></a>
       <button class="menu-toggle" id="menuToggle" aria-label="メニュー">☰</button>
       <nav id="mainNav" aria-label="メイン">
         <ul>
-          <li><a href="/index.html">ホーム</a></li>
-          <li><a href="/achievements/index.html">Publications</a></li>
-          <li><a href="/research/index.html">Research</a></li>
+          <li><a href="/">ホーム</a></li>
+          <li><a href="/achievements/">Publications</a></li>
+          <li><a href="/research/">Research</a></li>
           <li><a href="/statistics">Works</a></li>
-          <li><a href="/cv/index.html">CV</a></li>
+          <li><a href="/cv/">CV</a></li>
           <li><a href="/en/">EN</a></li>
         </ul>
       </nav>
@@ -33,13 +41,12 @@
 
   <main>
 
-    <!-- ====================================================
-         執筆中 (Work in Progress)
-         以下のカードは内容を準備中です。
-         完成したら <!-- と --> を取り除いて公開してください。
-         ==================================================== -->
+    <!-- 執筆中 (Work in Progress)
+         以下の script[type="text/html"] ブロックが草稿です。
+         公開するときは <script type="text/html"> と </script> を削除し、
+         中の HTML をそのまま main の中に貼り付けてください。 -->
 
-    <!--
+    <script type="text/html">
     <div class="card reveal">
       <div class="card-header">
         <span class="icon">🔬</span>
@@ -78,10 +85,10 @@
         <div class="research-item">
           <h3>創造性とオンラインコミュニティ</h3>
           <p>
-            創作活動において、他者の作品を参照することが自身の創作物の質にどう影響するかを、大規模オンラインコミュニティデータから分析しました。参照した他者のアイデアの質と多様性が創作物の質に与える影響を明らかにし、<em>Scientific Reports</em> に掲載されました。
+            創作活動において、他者の作品を参照することが自身の創作物の質にどう影響するかを、大規模オンラインコミュニティデータから分析しました。参照した他者のアイデアの質と多様性が創作物の質に与える影響を明らかにし、Scientific Reports に掲載されました。
           </p>
           <div class="pub-ref">
-            📄 <a href="https://doi.org/10.1038/s41598-024-65124-y" target="_blank">Sato, Yang &amp; Ueda, <em>Scientific Reports</em> (2024)</a>
+            📄 <a href="https://doi.org/10.1038/s41598-024-65124-y" target="_blank">Sato, Yang & Ueda, Scientific Reports (2024)</a>
           </div>
         </div>
 
@@ -102,7 +109,7 @@
 
       </div>
     </div>
-    -->
+    </script>
 
     <div class="card reveal">
       <div class="card-header">
