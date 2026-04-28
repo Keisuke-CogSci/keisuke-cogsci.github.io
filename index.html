@@ -1,57 +1,137 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>佐藤恵助</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="common.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>佐藤 恵助 | Keisuke SATO</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="common.js" defer></script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2QHWNPWZV0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2QHWNPWZV0');
-</script>
 <body>
-    <div id="header-placeholder"></div>
+  <header>
+    <div class="header-inner">
+      <a class="site-name" href="index.html">佐藤 恵助 <span>Keisuke Sato</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニュー">☰</button>
+      <nav id="mainNav" aria-label="メイン">
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="achievements/index.html">Publications</a></li>
+          <li><a href="research/index.html">Research</a></li>
+          <li><a href="/statistics">Works</a></li>
+          <li><a href="cv/index.html">CV</a></li>
+          <li><a href="/en/">EN</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section id="whats-new">
-            <h2>What's New</h2>
-            <ul>
-                <li><span>2026.04.01.</span> 日本学術振興会 特別研究員 (DC2) に採用していただきました。</li>
-                <li><span>2026.02.19.</span> 第3回 認知科学・社心若手リーグで発表しました。</li>
-                <li><span>2025.09.12.</span> 日本認知科学会第42回大会でポスター発表を行いました</li>
-                <li><span>2025.07.31.</span> CogSci2025 (@San Francisco)でポスター発表を行いました</li>
-                <li><span>2025.04.01.</span> 博士課程に進学しました。また，JST次世代研究者挑戦的研究プログラム (SPRING) のプロジェクト生として採用されました。</li>
-                <li><span>2025.03.24.</span> 修士課程を修了し，修士(学術)の学位を取得しました。また，修士論文が高く評価され，一高記念賞を受賞しました。</li>
-            </ul>
-        </section>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>佐藤 恵助<span class="en">Keisuke Sato</span></h1>
+    <p class="hero-subtitle">
+      東京大学 大学院総合文化研究科 広域科学専攻 博士課程2年<br>
+      日本学術振興会 特別研究員 (DC2)
+    </p>
+  </section>
 
-        <section id="about">
-            <h2>About</h2>
-            <p>専門は認知科学です。特に、神経科学的に妥当な数理モデルによる高次の認知機能の理解を重視し、「他者」を対象とした研究を行っています。</p>
-        </section>
+  <main>
 
-        <section id="keywords">
-            <h2>Keywords</h2>
-            <p> 認知科学, 神経科学, 計算認知科学, 社会性認知 </p>
-        </section>
+    <!-- WHAT'S NEW -->
+    <div class="card reveal" id="news">
+      <div class="card-header">
+        <span class="icon">📣</span>
+        <h2>What's New</h2>
+      </div>
+      <ul class="news-list">
+        <li class="news-item">
+          <span class="news-date">2026.04.01</span>
+          <span class="news-text">日本学術振興会 特別研究員 (DC2) に採用されました。<span class="news-tag tag-award">受賞・採用</span></span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2026.02.19</span>
+          <span class="news-text">第3回 認知科学・社心若手リーグで口頭発表しました。<span class="news-tag tag-conf">発表</span></span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2025.09.12</span>
+          <span class="news-text">日本認知科学会第42回大会でポスター発表を行いました。<span class="news-tag tag-conf">発表</span></span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2025.07.31</span>
+          <span class="news-text">CogSci 2025 (San Francisco) でポスター発表を行いました。<span class="news-tag tag-conf">国際発表</span></span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2025.04.01</span>
+          <span class="news-text">博士課程に進学。JST次世代研究者挑戦的研究プログラム (SPRING GX) のプロジェクト生に採用されました。<span class="news-tag tag-start">進学・採用</span></span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2025.03.24</span>
+          <span class="news-text">修士課程修了・修士(学術)取得。修士論文が<b>一高記念賞</b>を受賞しました。<span class="news-tag tag-award">受賞</span></span>
+        </li>
+      </ul>
+    </div>
 
-        <section id="links">
-            <h2>Links</h2>
-            <ul>
-                <li>連絡先: <a href="mailto:lesucre326@g.ecc.u-tokyo.ac.jp">lesucre326@g.ecc.u-tokyo.ac.jp</a></li>
-                <li><a href="https://x.com/KSK_UT" target="_blank">X</a></li>
-                <li><a href="http://www.cs.c.u-tokyo.ac.jp/" target="_blank">植田一博研究室</a> … 所属研究室</li>
-            </ul>
-        </section>
-    </main>
+    <!-- ABOUT -->
+    <div class="card reveal" id="about">
+      <div class="card-header">
+        <span class="icon">👤</span>
+        <h2>About <span class="en-label">— 自己紹介</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-block" style="grid-column: 1 / -1;">
+          <h3>Research Interest</h3>
+          <p>専門は<strong>認知科学</strong>です。特に、神経科学的に妥当な数理モデルによる高次の認知機能の理解を重視し、「他者」を対象とした研究を行っています。他者の動作・意図の知覚（アニマシー知覚）、心の理論、創造性と社会的相互作用がテーマです。</p>
+        </div>
+        <div class="about-block">
+          <h3>Affiliation</h3>
+          <p>東京大学 大学院総合文化研究科<br>広域科学専攻<br><a href="http://www.cs.c.u-tokyo.ac.jp/" target="_blank">植田一博研究室</a></p>
+        </div>
+        <div class="about-block">
+          <h3>Fellowship</h3>
+          <p>日本学術振興会 特別研究員 (DC2)<br>JST SPRING GX プロジェクト生</p>
+        </div>
+      </div>
+      <div style="margin-top: 18px;">
+        <div style="font-size:0.82rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--blue); margin-bottom:10px;">Keywords</div>
+        <div class="keyword-chips">
+          <span class="chip">認知科学</span>
+          <span class="chip">計算認知科学</span>
+          <span class="chip">神経科学</span>
+          <span class="chip">社会性認知</span>
+          <span class="chip">アニマシー知覚</span>
+          <span class="chip">心の理論</span>
+          <span class="chip">創造性</span>
+          <span class="chip">ベイズ推論</span>
+        </div>
+      </div>
+    </div>
 
-    <div id="footer-placeholder"></div>
+    <!-- CONTACT -->
+    <div class="card reveal" id="contact">
+      <div class="card-header">
+        <span class="icon">✉️</span>
+        <h2>Contact <span class="en-label">— 連絡先</span></h2>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon">📧</span>
+        <span class="contact-label">Email</span>
+        <a href="mailto:lesucre326@g.ecc.u-tokyo.ac.jp">lesucre326@g.ecc.u-tokyo.ac.jp</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon">𝕏</span>
+        <span class="contact-label">Twitter/X</span>
+        <a href="https://x.com/KSK_UT" target="_blank">@KSK_UT</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon">🏛</span>
+        <span class="contact-label">Lab</span>
+        <a href="http://www.cs.c.u-tokyo.ac.jp/" target="_blank">植田一博研究室</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Keisuke SATO — 東京大学大学院総合文化研究科</p>
+  </footer>
 </body>
 </html>

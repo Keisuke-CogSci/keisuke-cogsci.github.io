@@ -1,77 +1,124 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>研究内容 - 佐藤恵助</title>
-    <link rel="stylesheet" href="/styles.css">
-    <script src="../common.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — 佐藤 恵助</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/common.js" defer></script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2QHWNPWZV0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2QHWNPWZV0');
-</script>
 <body>
-    <div id="header-placeholder"></div>
+  <header>
+    <div class="header-inner">
+      <a class="site-name" href="/index.html">佐藤 恵助 <span>Keisuke Sato</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニュー">☰</button>
+      <nav id="mainNav" aria-label="メイン">
+        <ul>
+          <li><a href="/index.html">ホーム</a></li>
+          <li><a href="/achievements/index.html">Publications</a></li>
+          <li><a href="/research/index.html">Research</a></li>
+          <li><a href="/statistics">Works</a></li>
+          <li><a href="/cv/index.html">CV</a></li>
+          <li><a href="/en/">EN</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section id="reasearch">
-           <h2>研究内容紹介</h2>
+  <section class="hero">
+    <h1 style="font-size:1.9rem; letter-spacing:0.04em;">Research
+      <span class="en" style="font-size:1rem;">研究内容</span>
+    </h1>
+  </section>
 
-        <!--
-        <section id="reasearch">
-            <h3>「他者」の認知科学</h3>
-            <p>
-              人は常に他者と関わり合いながら生きています。
-              しかし、他者は本質的に＜他＞的存在であり、その真の内面を知ることは不可能です。
-              そのため、人は他者に自己を理解してもらおうと、表情や仕草や言葉を通じて自己の内面の情報を表現し、他者に伝達しようとします。
-              同時に人は他者の内面を理解しようと、他者が発する情報を解釈しようとします。
-              この情報の相互のやりとりを通して、人は他者と協力し、共に社会を創り上げているといえます。
-              他者の心の状態 (たとえば意図や好み、考えや態度など) を推測する能力は心の理論 (Theory of Mind)と呼ばれます。
-              これは、適切なコミュニケーションを取り、協調して課題に取り組むという人間の社会的な行動を成立させる上で不可欠の認知機能です。
-              私の研究課題の1つは、この認知機能が脳の計算資源の制約や即時的なコミュニケーションの時間的制約をどのように克服し、円滑な相互作用を実現しているのかを明らかにすることです。
-            </p>
-        </section>
+  <main>
 
-        <section id="research">
-          <h3>相互作用における困難</h3>
+    <!-- ====================================================
+         執筆中 (Work in Progress)
+         以下のカードは内容を準備中です。
+         完成したら <!-- と --> を取り除いて公開してください。
+         ==================================================== -->
+
+    <!--
+    <div class="card reveal">
+      <div class="card-header">
+        <span class="icon">🔬</span>
+        <h2>研究概要</h2>
+      </div>
+      <p style="font-size:0.95rem; line-height:1.85;">
+        専門は<strong>認知科学</strong>です。神経科学的に妥当な数理モデルによる高次の認知機能の理解を重視し、「他者」を対象とした研究を行っています。他者は本質的に他的存在であり、その真の内面を知ることは不可能です。人は他者と情報を相互にやりとりすることで協力し、社会を創り上げています。この相互作用がどのように実現されているかを、計算論的アプローチから明らかにすることを目指しています。
+      </p>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-header">
+        <span class="icon">🧩</span>
+        <h2>研究テーマ</h2>
+      </div>
+      <div class="research-grid">
+
+        <div class="research-item">
+          <h3>「他者」の認知科学</h3>
           <p>
-            自閉スペクトラム症 (Autism Spectrum Disorder; ASD) は、対人関係に困難が生じる発達障害です。
-            他者との円滑な相互作用を前提とする社会にうまく馴染めず苦しんでいるASD者は少なくありません。
-            ASD者の認知特性を明らかにし、そのメカニズムを理解することで、ASDの諸症状の未解明の原因の究明ならびに診断・療育手法の確立を目指したいと考えています。
+            他者の内面（意図・感情・状態）を推測する能力は<em>心の理論 (Theory of Mind)</em> と呼ばれます。この認知機能が、脳の計算資源の制約や即時的なコミュニケーションの時間的制約をどのように克服し、円滑な相互作用を実現しているのかを、計算論モデルにより明らかにします。
           </p>
-        </section>
+        </div>
 
-        <section id="research">
-          <h3>世界と世界のモデル</h3>
+        <div class="research-item">
+          <h3>アニマシー知覚の計算論モデル</h3>
           <p>
-            脳は視覚や聴覚などの感覚入力の情報から、世界の構造についてのモデル (内部モデル/世界モデル)を学習していると言われています。
-            脳が獲得したこのモデルと、実際の物理的世界の対応づけを与えることを目標に研究を進めています。
-            また、自己のための世界のモデルと他者のための言語という根本的に異なる2つのシステムが交わるところに生まれる「歪み」に注目しています。
+            動く点を見るだけで「生き物らしさ」を感じるアニマシー知覚を、ベイズ推論に基づく数理モデルで定式化し、実験的に検証しています。特に、目標方向の推論に着目した計算論モデルの構築と、生物種に関する教示がアニマシー知覚に与える影響を検討しています。
           </p>
-        </section>
+          <div class="pub-ref">
+            📄 <a href="https://www.jcss.gr.jp/meetings/jcss2025/proceedings/pdf/JCSS2025_P1-45.pdf" target="_blank">JCSS 2025</a> &nbsp;／&nbsp;
+            <a href="https://hai-conference.net/symp2025/proceedings/html/paper/paper-G-6.html" target="_blank">HAIシンポジウム 2025</a> &nbsp;／&nbsp; CogSci 2025
+          </div>
+        </div>
 
-        <section id="research">
-          <h3>協働</h3>
+        <div class="research-item">
+          <h3>創造性とオンラインコミュニティ</h3>
           <p>
-            自己は身体に縛られており、一生のうちに経験できる情報の量には限りがあります。
-            他者との交流、あるいは他者が生み出した世界に触れることは、この制約を取り払い、自分一人では生み出せない価値を生み出すことに繋がります。
-            人工知能が創作の現場を脅かしつつある中で、人が創造性を最大限発揮するには何をすべきでしょうか？
-            この問いを、「他者」をキーワードにして研究していきたいと考えています。
+            創作活動において、他者の作品を参照することが自身の創作物の質にどう影響するかを、大規模オンラインコミュニティデータから分析しました。参照した他者のアイデアの質と多様性が創作物の質に与える影響を明らかにし、<em>Scientific Reports</em> に掲載されました。
           </p>
-          <p>(研究例) <B><U>Sato, K.</U></B>, Yang, K., Ueda, K. (2024). <i>Scientific Reports</i>.</p>
-        </section>
-      </section>
+          <div class="pub-ref">
+            📄 <a href="https://doi.org/10.1038/s41598-024-65124-y" target="_blank">Sato, Yang &amp; Ueda, <em>Scientific Reports</em> (2024)</a>
+          </div>
+        </div>
 
+        <div class="research-item">
+          <h3>社会的相互作用と共同主体感</h3>
+          <p>
+            協調課題において、相手の行動プロセスや事前情報が共同運動主体感 (Sense of Joint Agency) に与える影響を検討しています。共同作業における相互理解のメカニズムを解明することを目指しています。
+          </p>
+          <div class="pub-ref">📄 共著 CogSci 2025 複数件 ／ 日本認知心理学会 2025</div>
+        </div>
+
+        <div class="research-item">
+          <h3>世界モデルと言語</h3>
+          <p>
+            脳は感覚入力から世界の構造についての内部モデル（世界モデル）を学習していると言われています。自己のための世界モデルと、他者との共有のための言語という根本的に異なる2つのシステムが交わるところに生まれる「歪み」に注目した研究も進めています。
+          </p>
+        </div>
+
+      </div>
+    </div>
     -->
 
-    </main>
+    <div class="card reveal">
+      <div class="card-header">
+        <span class="icon">🔬</span>
+        <h2>研究内容</h2>
+      </div>
+      <p style="font-size:0.95rem; line-height:1.85; color:var(--muted);">
+        このページは現在執筆中です。しばらくお待ちください。<br>
+        <em>This page is currently under construction.</em>
+      </p>
+    </div>
 
-    <div id="footer-placeholder"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Keisuke SATO — 東京大学大学院総合文化研究科</p>
+  </footer>
 </body>
 </html>
