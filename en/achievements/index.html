@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achievements - Keisuke Sato</title>
-    <link rel="stylesheet" href="../../styles.css">
-    <script src="../../common.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications — Keisuke SATO</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/common.js" defer></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2QHWNPWZV0"></script>
@@ -16,70 +16,193 @@
   gtag('config', 'G-2QHWNPWZV0');
 </script>
 <body>
-    <div id="header-placeholder"></div>
+  <header>
+    <div class="header-inner">
+      <a class="site-name" href="/en/">Keisuke Sato <span>佐藤 恵助</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      <nav id="mainNav" aria-label="Main">
+        <ul>
+          <li><a href="/en/">Home</a></li>
+          <li><a href="/en/achievements/">Publications</a></li>
+          <li><a href="/en/research/">Research</a></li>
+          <li><a href="/statistics">Works</a></li>
+          <li><a href="/en/cv/">CV</a></li>
+          <li><a href="/">JA</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section id="journal-papers">
-            <h2>Journal Articles (Peer-Reviewed)</h2>
-            <ol>
-              <li><b><u>K. Sato</u></b>, K. Yang, K. Ueda (2024). “Impact of the Quality and Diversity of Reference Products on Creative Activities in Online Communities.” <i>Scientific Reports</i>, 14, 65124, 1–12.
-                <a href="https://doi.org/10.1038/s41598-024-65124-y">[DOI]</a>
-                <a href="https://www.nature.com/articles/s41598-024-65124-y">[Nature.com]</a>
-                <a href="https://www.c.u-tokyo.ac.jp/info/news/topics/20240711180000.html">[Press Release]</a>
-                <a href="https://www.nikkei.com/article/DGXZRSP674661_Q4A710C2000000/">[Nikkei]</a>
-                <a href="https://tiisys.com/blog/2024/07/12/post-140618/3/">[Tech Eye Research Institute]</a>
-              </li>
-            </ol>
-        </section>
+  <section class="hero">
+    <h1 style="font-size:1.9rem; letter-spacing:0.04em;">Publications
+      <span class="en" style="font-size:1rem;">業績一覧</span>
+    </h1>
+  </section>
 
-        <section id="international-conferences">
-            <h2>International Conferences (Peer-Reviewed)</h2>
-            <ol>
-              <li><b><u>K. Sato</u></b>, K. Ueda. “Bayesian Model of Goal Direction Inference in Animacy Perception from Moving Dots.” In <i>Proceedings of CogSci 2025</i> (Vol. 47).</li>
-              <li>K. Jomura, M. Tamura, <b><u>K. Sato</u></b>, K. Ueda. “Sense of Joint Agency: The Role of Prior Partner Information.” In <i>Proceedings of CogSci 2025</i> (Vol. 47).</li>
-              <li>M. Tamura, K. Jomura, <b><u>K. Sato</u></b>, K. Ueda. “Influence of a Partner's Behavioral Process on the Sense of Joint Agency during Collaborative Task.” In <i>Proceedings of CogSci 2025</i> (Vol. 47).</li>
-            </ol>
-        </section>
+  <main>
+    <div class="card reveal">
+      <div class="card-header">
+        <span class="icon">📚</span>
+        <h2>Publications</h2>
+      </div>
 
-        <section id="domestic-conferences">
-            <h2>Domestic Conferences</h2>
-            <ol>
-              <li><b><u>K. Sato</u></b>, K. Ueda. “Mathematical Modeling of Animacy Perception Arising from the Observation of Moving Dots” (点の運動の観察から生じるアニマシー知覚の数理モデルの構築). HAI Symposium 2025, Osaka, Feb 2025. (Oral)
-                <a href="https://hai-conference.net/symp2025/proceedings/html/paper/paper-G-6.html">[Link]</a>
-              </li>
-              <li><b><u>K. Sato</u></b>, K. Ueda. “Bayesian Model of Goal Direction Inference in Animacy Perception from Moving Dots.” CREST “Symbiotic Interaction” 14th Research Area Meeting, Nagoya, Feb 2025. (Oral + Poster)</li>
-              <li><b><u>K. Sato</u></b>, K. Ueda. “A Study on Animacy Perception Arising from the Observation of Dot Motion: Effects of Directional Change and Target Visibility” (点の運動の観察から生じるアニマシー知覚に関する検討). HCG Symposium 2024, Kanazawa, Dec 2024. (Oral + Poster)</li>
-              <li><b><u>K. Sato</u></b>, K. Yang, K. Ueda. “Impact of the Quality and Diversity of Reference Products on Creative Activities in Online Communities.” JSAI Annual Conference 2024, Shizuoka, May 2024. (Oral)
-                <a href="https://www.jstage.jst.go.jp/article/pjsai/JSAI2024/0/JSAI2024_1T3OS32a03/_article/-char/ja">[J-STAGE]</a>
-              </li>
-            </ol>
-        </section>
+      <!-- 1. Journal Articles -->
+      <div class="pub-section open">
+        <button class="pub-section-toggle" onclick="togglePubSection(this)">
+          <span><span class="pub-section-title">Journal Articles (Peer-Reviewed)</span><span class="pub-section-count">2</span></span>
+          <span class="pub-chevron">▼</span>
+        </button>
+        <div class="pub-body">
+          <ul class="pub-list">
+            <li class="pub-entry">
+              <span class="pub-me">Sato, K.</span>, Yang, K., &amp; Ueda, K. (2024). Impact of the Quality and Diversity of Reference Products on Creative Activities in Online Communities. <span class="pub-venue">Scientific Reports</span>, <em>14</em>, 65124, 1–12.
+              <div class="pub-links">
+                <a href="https://doi.org/10.1038/s41598-024-65124-y" target="_blank">DOI</a>
+                <a href="https://www.nature.com/articles/s41598-024-65124-y" target="_blank">nature.com</a>
+                <a href="https://www.c.u-tokyo.ac.jp/info/news/topics/20240711180000.html" target="_blank">Press Release</a>
+                <a href="https://www.nikkei.com/article/DGXZRSP674661_Q4A710C2000000/" target="_blank">Nikkei</a>
+                <a href="https://tiisys.com/blog/2024/07/12/post-140618/3/" target="_blank">Tech Eye</a>
+              </div>
+            </li>
+            <li class="pub-entry">
+              Ueda, K., Yang, K., Fujisaki, I., &amp; <span class="pub-me">Sato, K.</span> (2025). A Network Science Approach to Creativity Research: Insights from Large-Scale Data. <span class="pub-venue">Cognitive Studies</span>, <em>32</em>(1), 12–25.
+              <div class="pub-links">
+                <a href="https://doi.org/10.11225/cs.2024.057" target="_blank">DOI</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-        <section id="awards">
-            <h2>Awards</h2>
-            <ol>
-              <li><b>Ichiko Memorial Award</b>. Mar 2025. (for M.A. thesis: “Computational Modeling of Animacy Perception from Observed Motion of Dots — Focusing on Goal-Direction Inference”)</li>
-              <li><b>Outstanding Research Award</b>. Mar 2025. (T. Sakura, N. Jomura, <b><u>K. Sato</u></b>, K. Ueda. “Examination of the Modes of Interaction with Tools and the Impressions Held about Them,” HAI Symposium 2025, Osaka, Feb 2025)</li>
-            </ol>
-        </section>
+      <!-- 2. International Conferences -->
+      <div class="pub-section open">
+        <button class="pub-section-toggle" onclick="togglePubSection(this)">
+          <span><span class="pub-section-title">International Conferences (Peer-Reviewed)</span><span class="pub-section-count">3</span></span>
+          <span class="pub-chevron">▼</span>
+        </button>
+        <div class="pub-body">
+          <ul class="pub-list">
+            <li class="pub-entry">
+              <span class="pub-me">Sato, K.</span>, Ueda, K. (2025). Bayesian Model of Goal Direction Inference in Animacy Perception from Moving Dots. In <span class="pub-venue">Proceedings of the Annual Meeting of the Cognitive Science Society (CogSci 2025)</span> (Vol. 47).
+            </li>
+            <li class="pub-entry">
+              Jomura, K., Tamura, M., <span class="pub-me">Sato, K.</span>, Ueda, K. (2025). Sense of Joint Agency: The Role of Prior Partner Information. In <span class="pub-venue">Proceedings of the Annual Meeting of the Cognitive Science Society (CogSci 2025)</span> (Vol. 47).
+            </li>
+            <li class="pub-entry">
+              Tamura, M., Jomura, K., <span class="pub-me">Sato, K.</span>, Ueda, K. (2025). Influence of a Partner's Behavioral Process on the Sense of Joint Agency during Collaborative Task. In <span class="pub-venue">Proceedings of the Annual Meeting of the Cognitive Science Society (CogSci 2025)</span> (Vol. 47).
+            </li>
+          </ul>
+        </div>
+      </div>
 
-        <section id="others">
-            <h2>Other Publications & Presentations</h2>
-            <ol>
-              <li>K. Ueda, K. Yang, I. Fujisaki, <b><u>K. Sato</u></b>. (2025). “A Network Science Approach to Creativity Research: Insights from Large-Scale Data.” <i>Cognitive Studies</i>, 32(1), 12–25.
-                <a href="https://doi.org/10.11225/cs.2024.057">[DOI]</a>
-              </li>
-              <li>T. Sakura, N. Jomura, <b><u>K. Sato</u></b>, K. Ueda. “Examination of the Modes of Interaction with Tools and the Impressions Held about Them.” HAI Symposium 2025, Osaka, Feb 2025.
-                <a href="https://hai-conference.net/symp2025/proceedings/html/paper/paper-D-1.html">[Link]</a> → <b>Outstanding Research Award</b>
-              </li>
-              <li>M. Tamura, N. Jomura, <b><u>K. Sato</u></b>, K. Ueda. “Influence of a Partner’s Behavioral Process on the Sense of Joint Agency during Collaborative Task.” HAI Symposium 2025, Osaka, Feb 2025.
-                <a href="https://hai-conference.net/symp2025/proceedings/html/paper/paper-G-3.html">[Link]</a>
-              </li>
-              <li>N. Jomura, M. Tamura, <b><u>K. Sato</u></b>, K. Ueda. “The Influence of Prior Partner Information on the Sense of Joint Agency.” Japanese Psychonomic Society, Kyoto, May 2025.</li>
-            </ol>
-        </section>
-    </main>
+      <!-- 3. Domestic Conferences -->
+      <div class="pub-section open">
+        <button class="pub-section-toggle" onclick="togglePubSection(this)">
+          <span><span class="pub-section-title">Domestic Conferences</span><span class="pub-section-count">7</span></span>
+          <span class="pub-chevron">▼</span>
+        </button>
+        <div class="pub-body">
+          <ul class="pub-list">
+            <li class="pub-entry">
+              <span class="pub-me">Sato, K.</span> Computational Cognitive Science for Mutual Understanding. 3rd Young Researchers' League of Cognitive Science and Social Psychology, O23, Ibaraki, Feb 2026. (Oral)
+            </li>
+            <li class="pub-entry">
+              <span class="pub-me">Sato, K.</span>, Ueda, K. Computational Model of Animacy Perception: Effects of Species Instructions. 42nd Annual Meeting of the Japanese Cognitive Science Society, P1-45, Tokyo, Sep 2025. (Poster)
+              <div class="pub-links"><a href="https://www.jcss.gr.jp/meetings/jcss2025/proceedings/pdf/JCSS2025_P1-45.pdf" target="_blank">PDF</a></div>
+            </li>
+            <li class="pub-entry">
+              <span class="pub-me">Sato, K.</span>, Ueda, K. Mathematical Modeling of Animacy Perception Arising from the Observation of Moving Dots (点の運動の観察から生じるアニマシー知覚の数理モデルの構築). HAI Symposium 2025, G-6, Osaka, Feb 2025. (Oral)
+              <div class="pub-links"><a href="https://hai-conference.net/symp2025/proceedings/html/paper/paper-G-6.html" target="_blank">Link</a></div>
+            </li>
+            <li class="pub-entry">
+              <span class="pub-me">Sato, K.</span>, Ueda, K. Bayesian Model of Goal Direction Inference in Animacy Perception from Moving Dots. CREST "Symbiotic Interaction" The 14th Research Area Meeting, Nagoya, Feb 2025. (Oral + Poster)
+            </li>
+            <li class="pub-entry">
+              <span class="pub-me">Sato, K.</span>, Ueda, K. A Study on Animacy Perception Arising from the Observation of Dot Motion: Effects of Directional Change and Target Visibility (点の運動の観察から生じるアニマシー知覚に関する検討). HCG Symposium 2024, B-4-1, Kanazawa, Dec 2024. (Oral + Poster)
+            </li>
+            <li class="pub-entry">
+              <span class="pub-me">Sato, K.</span>, Yang, K., Ueda, K. Impact of the Quality and Diversity of Reference Products on Creative Activities in Online Communities. JSAI Annual Conference 2024 (38th), OS-32, Shizuoka, May 2024. (Oral)
+              <div class="pub-links"><a href="https://www.jstage.jst.go.jp/article/pjsai/JSAI2024/0/JSAI2024_1T3OS32a03/_article/-char/ja" target="_blank">J-STAGE</a></div>
+            </li>
+            <li class="pub-entry">
+              Jomura, N., Tamura, M., <span class="pub-me">Sato, K.</span>, Ueda, K. The Influence of Prior Partner Information on the Sense of Joint Agency (パートナーに関する事前情報が共同運動主体に与える影響). Japanese Psychonomic Society, O4-6, Kyoto, May 2025.
+            </li>
+          </ul>
+        </div>
+      </div>
 
-    <div id="footer-placeholder"></div>
+      <!-- 4. Co-authored -->
+      <div class="pub-section open">
+        <button class="pub-section-toggle" onclick="togglePubSection(this)">
+          <span><span class="pub-section-title">Co-authored Works</span><span class="pub-section-count">4</span></span>
+          <span class="pub-chevron">▼</span>
+        </button>
+        <div class="pub-body">
+          <ul class="pub-list">
+            <li class="pub-entry">
+              Ueda, K., Yang, K., Fujisaki, I., &amp; <span class="pub-me">Sato, K.</span> (2025). A Network Science Approach to Creativity Research: Insights from Large-Scale Data. <span class="pub-venue">Cognitive Studies</span>, <em>32</em>(1), 12–25.
+              <div class="pub-links"><a href="https://doi.org/10.11225/cs.2024.057" target="_blank">DOI</a></div>
+            </li>
+            <li class="pub-entry">
+              Sakura, T., Jomura, N., <span class="pub-me">Sato, K.</span>, Ueda, K. Examination of the Modes of Interaction with Tools and the Impressions Held about Them (道具とのインタラクションの様態と道具に対して抱く印象についての検討). HAI Symposium 2025, D-1, Osaka, Feb 2025. → <strong>Outstanding Research Award</strong>
+              <div class="pub-links"><a href="https://hai-conference.net/symp2025/proceedings/html/paper/paper-D-1.html" target="_blank">Link</a></div>
+            </li>
+            <li class="pub-entry">
+              Tamura, M., Jomura, N., <span class="pub-me">Sato, K.</span>, Ueda, K. Influence of a Partner's Behavioral Process on the Sense of Joint Agency During Collaborative Task (協調課題における相手の行動プロセスが共同運動主体感に与える影響). HAI Symposium 2025, G-3, Osaka, Feb 2025.
+              <div class="pub-links"><a href="https://hai-conference.net/symp2025/proceedings/html/paper/paper-G-3.html" target="_blank">Link</a></div>
+            </li>
+            <li class="pub-entry">
+              Jomura, N., Tamura, M., <span class="pub-me">Sato, K.</span>, Ueda, K. The Influence of Prior Partner Information on the Sense of Joint Agency (パートナーに関する事前情報が共同運動主体に与える影響). Japanese Psychonomic Society, O4-6, Kyoto, May 2025.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 5. Awards -->
+      <div class="pub-section open">
+        <button class="pub-section-toggle" onclick="togglePubSection(this)">
+          <span><span class="pub-section-title">Awards</span><span class="pub-section-count">2</span></span>
+          <span class="pub-chevron">▼</span>
+        </button>
+        <div class="pub-body">
+          <ul class="pub-list">
+            <li class="pub-entry">
+              🏆 <strong>Ichiko Memorial Award</strong>. Mar 2025.<br>
+              <span style="color:var(--muted); font-size:0.87rem;">For M.A. thesis: "A Study on Animacy Perception Arising from the Observation of Moving Dots — Computational Modeling Focused on Goal-Direction Inference"</span>
+            </li>
+            <li class="pub-entry">
+              🏆 <strong>Outstanding Research Award</strong>. Mar 2025.<br>
+              <span style="color:var(--muted); font-size:0.87rem;">Sakura, T., Jomura, N., <span class="pub-me">Sato, K.</span>, Ueda, K. "Examination of the Modes of Interaction with Tools and the Impressions Held about Them." HAI Symposium 2025, D-1, Osaka, Feb 2025.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 6. Theses -->
+      <div class="pub-section open">
+        <button class="pub-section-toggle" onclick="togglePubSection(this)">
+          <span><span class="pub-section-title">Theses</span><span class="pub-section-count">2</span></span>
+          <span class="pub-chevron">▼</span>
+        </button>
+        <div class="pub-body">
+          <ul class="pub-list">
+            <li class="pub-entry">
+              <strong>Master's Thesis</strong> (Mar 2025, M.A.) → <strong>Ichiko Memorial Award</strong><br>
+              "A Study on Animacy Perception Arising from the Observation of Moving Dots — Computational Modeling Focused on Goal-Direction Inference"
+            </li>
+            <li class="pub-entry">
+              <strong>Bachelor's Thesis</strong> (Mar 2023, B.A.)<br>
+              "Individual Traits and the Nature of Prior Ideas in Relation to Creativity: Analysis of Creative Works in Online Communities"
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Keisuke SATO — Graduate School of Arts and Sciences, The University of Tokyo</p>
+  </footer>
 </body>
 </html>
